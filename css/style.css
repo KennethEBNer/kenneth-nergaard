@@ -20,13 +20,13 @@
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-body: 16px;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
         0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 993px) {
+@media (min-width: 992px) {
   :root {
       --fs-h1: 4rem;
       --fs-h2: 3.25rem;
@@ -86,7 +86,7 @@ header {
   justify-content: space-between;
   padding: 0.5em;
   background-color: var(--clr-dark);
-  border-bottom: 3px solid var(--clr-accent);
+  border-bottom: 2px solid var(--clr-accent);
 }
 
 .logo a {
@@ -290,10 +290,6 @@ section {
 
 @media (min-width: 993px) {
 
-  /* section {
-    padding: 5em 2em;
-  } */
-
   .intro {
     padding: 6em 2em;
     display: grid;
@@ -342,24 +338,22 @@ section {
 
 .projects-title{
   color: var(--clr-accent);
-  padding: .75em;
+  padding-bottom: .75em;
   font-family: var(--ff-secondary);
   font-size: var(--fs-h2);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 1.25em;
 }
 
 /* Carousel Section */
-
-/* Slider Images == 1200 * 700 */
-/* Slider Images ?? 1200 * 600 */
+/* Slider Images 1200 * 600 */
 
 .carousel {
   margin-bottom: 4em;
 }
 
 .carousel-caption {
-  margin-bottom: 40px!important;
+  margin-bottom: 2.5em!important;
   background-color: rgba(14, 14, 14, 0.85);
   padding: 1em 1em;
   border: 1px solid var(--clr-accent);
@@ -383,7 +377,7 @@ section {
   font-size: 0.85em;
   font-weight: var(--fw-bold);
   display: inline-block;
-  padding: .25em 1em;
+  padding: .25em .5em;
   margin: 0 1em;
   background-color: var(--clr-accent);
   color: #000;
@@ -391,11 +385,68 @@ section {
   cursor: pointer;
   width: 170px;
   border-radius: 5px;
-  /* border: 1px solid var(--clr-light); */
-  transition: transform 150ms ease-in-out;
+  transition: transform 50ms ease-in-out;
 }
 .carousel-btn:hover {
   color: #000;
   transform: scale(1.1);
   text-decoration: none;
 }
+
+/* Media Queries for Projects Section */
+
+@media (max-width: 992px) {
+  .projects-title{
+    padding-bottom: 1em;
+    margin-top: 1.5em;
+  }
+
+  .carousel-caption {
+    margin-bottom: 2.5em!important;
+    padding: 1em 1em;
+  }
+
+  .carousel-title {
+    font-size: 2em;
+  }
+
+  .carousel-text {
+    margin: 1em auto;
+    font-size: 1em;
+    font-family: var(--ff-secondary);
+  }
+
+  .carousel-btn {
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    margin-bottom: 1.5em!important;
+    padding: 1.5em 1em;
+  }
+
+  .carousel-title {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+  }
+  .carousel-btn {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+  }
+  .carousel-btn + .carousel-btn {
+    margin-top: 1em;
+  }
+}
+
+/* Bootstrap breakpoints:
+
+xs - 576px and under
+sm - 576px and over
+md - 768px and over
+ls - 992px and over
+xl - 1200px and over
+
+*/
