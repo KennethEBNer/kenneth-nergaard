@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!-- Link to Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <!-- Link to Local Stylesheet -->
   <link type="text/css" rel="stylesheet" href="./css/style.css">
   <title>Kenneth Nergård</title>
@@ -25,12 +25,12 @@
     <button class="nav-toggle nav-btn" aria-label="toggle-navigation">
       <span class="hamburger"></span>
     </button>
-    <nav class="nav">
+    <nav id="main-nav" class="nav">
       <ul class="nav-list">
         <li class="nav-item"><a class="nav-link" href="index.html">Hjem</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Prosjekter</a></li>
-        <li class="nav-item"><a class="nav-link" href="#home">Sertifiseringer</a></li>
-        <li class="nav-item"><a class="nav-link" href="#home">Kontakt</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Sertifiseringer</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Kontakt</a></li>
       </ul>
     </nav>
   </header> <!-- END HEADER SECTION-->
@@ -74,7 +74,9 @@
                 <img class="d-block img-fluid" src="./img/rsz_600_project-background-7.jpg" alt="Second Slide">
                 <div class="carousel-caption">
                   <h3 class="carousel-title">Pomodoro Klokke App</h3>
-                  <p class="carousel-text d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eaque rem quo tempore placeat dolorum molestias voluptate nisi magni reprehenderit soluta libero!</p>
+                  <p class="carousel-text d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid, eaque rem quo tempore placeat dolorum molestias voluptate nisi magni reprehenderit soluta
+                    libero!</p>
                   <a class="carousel-btn" href="">Se app</a>
                   <a class="carousel-btn" href="">Se kode</a>
                 </div>
@@ -83,7 +85,9 @@
                 <img class="d-block img-fluid" src="./img/rsz_600_project-background-2.jpg" alt="Third Slide">
                 <div class="carousel-caption">
                   <h3 class="carousel-title">YelpCamp</h3>
-                  <p class="carousel-text d-none d-md-block">Lorem harum, cupiditate animi nostrum aut quod iure voluptate voluptatem vero laboriosam ipsum ducimus facere nobis alias, non, vitae necessitatibus architecto culpa accusantium?</p>
+                  <p class="carousel-text d-none d-md-block">Lorem harum, cupiditate animi nostrum aut quod iure
+                    voluptate voluptatem vero laboriosam ipsum ducimus facere nobis alias, non, vitae necessitatibus
+                    architecto culpa accusantium?</p>
                   <a class="carousel-btn" href="">Se nettside</a>
                   <a class="carousel-btn" href="">Se kode</a>
                 </div>
@@ -101,8 +105,19 @@
     </div>
   </section> <!-- END PROJECTS SECTION -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  <!-- CERTIFICATES SECTION -->
+  <section id="certificates" class="certificates">
+    <div class="container">
+      <div class="row">
+        <h2 class="certificates-title">Sertifiseringer</h2>
+      </div>
+    </div>
+  </section> <!-- END CERTIFICATES SECTION -->
+
+ <!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -115,7 +130,48 @@
     $('.carousel').carousel({
       interval: 10000
     })
+
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function(e) {
+      // Check for a hash value
+      if(this.hash !== '') {
+        // Prevent default behaviour
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function() {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
   </script>
+  <!-- <script>
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function(e) {
+      // Check for a hash value
+      if(this.hash !== '') {
+        // Prevent default behaviour
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function() {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script> -->
 </body>
 
 </html>

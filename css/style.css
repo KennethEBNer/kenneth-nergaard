@@ -84,7 +84,7 @@ header {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  padding: 0.5em;
+  padding: 1em 3%;
   background-color: var(--clr-dark);
   border-bottom: 2px solid var(--clr-accent);
 }
@@ -94,6 +94,7 @@ header {
   font-size: var(--fs-h3);
   margin-left: 4em;
   text-decoration: none;
+  border-bottom: 4px solid var(--clr-accent);
   /* border: 2px solid red; */
 }
 
@@ -133,6 +134,10 @@ header {
 
 @media (max-width: 992px) {
 
+  header {
+    padding: 1.5em 3%;
+  }
+
   .logo a {
     margin-left: 2em;
   }
@@ -148,7 +153,6 @@ header {
     margin-right: 0;
     justify-content: center;
     z-index: 100;
-    /* display: none; */
 
     transform: translateX(100%);
   }
@@ -248,7 +252,7 @@ section {
 }
 
 .section-title {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
 }
 
 .section-title-intro {
@@ -262,6 +266,7 @@ section {
 
 .section-subtitle {
   margin: 0;
+  margin-top: 2em;
   font-size: 1.25em;
 }
 
@@ -269,11 +274,13 @@ section {
   background-color: var(--clr-accent);
   padding: .25em 1em;
   font-family: var(--ff-secondary);
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  display: block;
+  text-align: center;
 }
 
 .intro {
-  padding: 5em 2em;
+  padding: 7em 2em;
   position: relative;
 }
 
@@ -281,10 +288,6 @@ section {
   display: none;
 }
 
-.section-subtitle-intro {
-  display: block;
-  text-align: center;
-}
 
 /* Media Queries for Intro Section */
 
@@ -333,23 +336,22 @@ section {
 
 .projects {
   background-color: var(--clr-dark);
-  margin-bottom: 500px;
 }
 
 .projects-title{
-  color: var(--clr-accent);
+  color: #fff;
   padding-bottom: .75em;
   font-family: var(--ff-secondary);
   font-size: var(--fs-h2);
   margin: 0 auto;
-  margin-top: 1.25em;
+  margin-top: 1.5em;
 }
 
 /* Carousel Section */
 /* Slider Images 1200 * 600 */
 
 .carousel {
-  margin-bottom: 4em;
+  margin-bottom: 5em;
 }
 
 .carousel-caption {
@@ -439,6 +441,21 @@ section {
   .carousel-btn + .carousel-btn {
     margin-top: 1em;
   }
+}
+
+/* Projects Section */
+
+.certificates {
+  background-color: #ffffff;
+}
+
+.certificates-title{
+  color: #000;
+  padding-bottom: .75em;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h2);
+  margin: 0 auto;
+  margin-top: 1.5em;
 }
 
 /* Bootstrap breakpoints:
