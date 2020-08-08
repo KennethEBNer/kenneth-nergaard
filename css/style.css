@@ -260,8 +260,10 @@ header {
 
 /* Intro Section */
 
-section {
+.intro {
   top: 2.5em;
+  padding: 7em 2em;
+  position: relative;
 }
 
 .main-title {
@@ -286,11 +288,6 @@ section {
   text-align: center;
 }
 
-.intro {
-  padding: 7em 2em;
-  position: relative;
-}
-
 .intro-img {
   display: none;
 }
@@ -300,10 +297,12 @@ section {
 @media (min-width: 993px) {
 
   .intro {
+    top: 4.5em;
     padding: 6em 2em;
     display: grid;
     width: min-content;
     margin: 0 auto;
+    margin-bottom: 4em;
     column-gap: 1em;
     grid-template-areas:
         'img title'
@@ -340,7 +339,7 @@ section {
 
 @media (max-width: 575px) {
 
-  section {
+  .intro {
     top: 3.5em;
   }
   .intro {
@@ -365,7 +364,7 @@ section {
 }
 
 .carousel {
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 
 .carousel-caption {
@@ -486,7 +485,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   padding-top: 3em;
 }
 

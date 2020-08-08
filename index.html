@@ -27,7 +27,7 @@
     </button>
     <nav id="main-nav" class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="#home">Hjem</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Prosjekter</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Kompetanse</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
@@ -36,7 +36,7 @@
   </header> <!-- END HEADER SECTION-->
 
   <!-- INTRO SECTION -->
-  <section class="intro">
+  <section id="home" class="intro">
     <h1 class="main-title">
       <strong>Kenneth Nergård</strong>
     </h1>
@@ -192,35 +192,14 @@
 
         // Animate smooth scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top
+          scrollTop: $(hash).offset().top - 50
         }, 900, function () {
           // Add hash to URL after scroll
-          window.location.hash = hash;
+          /* window.location.hash = hash; */
         });
       }
     });
   </script>
-  <!-- <script>
-    // Add smooth scrolling
-    $('#main-nav a').on('click', function(e) {
-      // Check for a hash value
-      if(this.hash !== '') {
-        // Prevent default behaviour
-        e.preventDefault();
-
-        // Store hash
-        const hash = this.hash;
-
-        // Animate smooth scroll
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 900, function() {
-          // Add hash to URL after scroll
-          window.location.hash = hash;
-        });
-      }
-    });
-  </script> -->
 </body>
 
 </html>
