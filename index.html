@@ -29,18 +29,18 @@
       <ul class="nav-list">
         <li class="nav-item"><a class="nav-link" href="index.html">Hjem</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Prosjekter</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificates">Sertifiseringer</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificates">Kontakt</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Kompetanse</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
       </ul>
     </nav>
   </header> <!-- END HEADER SECTION-->
 
   <!-- INTRO SECTION -->
   <section class="intro">
-    <h1 class="section-title section-title-intro">
+    <h1 class="main-title">
       <strong>Kenneth Nergård</strong>
     </h1>
-    <p class="section-subtitle section-subtitle-intro">Selvlært IT Utvikler | Siv. Ingeniør</p>
+    <p class="main-subtitle">Selvlært IT Utvikler | Siv. Ingeniør</p>
     <img class="intro-img" src="./img/PB.jpg" alt="">
   </section> <!-- END INTRO SECTION -->
 
@@ -105,20 +105,53 @@
     </div>
   </section> <!-- END PROJECTS SECTION -->
 
-  <!-- CERTIFICATES SECTION -->
-  <section id="certificates" class="certificates">
+  <!-- SKILLS SECTION -->
+  <section id="skills">
     <div class="container">
       <div class="row">
-        <h2 class="certificates-title">Sertifiseringer</h2>
+        <h2 class="skills-main-title">Kompetanse</h2>
       </div>
+      <div class="row">
+        <div id="skills-shadow">
+          <h3 class="skills-text-title">Språk og Rammeverk</h3>
+          <div class="skills-text">
+            <ul class="text-black">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Bootstrap 4</li>
+              <li>jQuery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-xl-10 m-auto">
+          <div class="text-center" id="skills-shadow">
+            <div id="skills-text">
+              <h3 class="skills-title">Programmeringsspråk og Rammeverk</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Bootstrap 4</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
   </section> <!-- END CERTIFICATES SECTION -->
 
- <!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  <!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -132,9 +165,9 @@
     })
 
     // Add smooth scrolling
-    $('#main-nav a').on('click', function(e) {
+    $('#main-nav a').on('click', function (e) {
       // Check for a hash value
-      if(this.hash !== '') {
+      if (this.hash !== '') {
         // Prevent default behaviour
         e.preventDefault();
 
@@ -144,7 +177,7 @@
         // Animate smooth scroll
         $('html, body').animate({
           scrollTop: $(hash).offset().top
-        }, 900, function() {
+        }, 900, function () {
           // Add hash to URL after scroll
           window.location.hash = hash;
         });
