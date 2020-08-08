@@ -295,7 +295,6 @@ section {
   display: none;
 }
 
-
 /* Media Queries for Intro Section */
 
 @media (min-width: 993px) {
@@ -339,6 +338,17 @@ section {
 }
 }
 
+@media (max-width: 575px) {
+
+  section {
+    top: 3.5em;
+  }
+  .intro {
+    padding: 4em 2em;
+    position: relative;
+  }
+}
+
 /* Projects Section */
 
 .projects {
@@ -353,9 +363,6 @@ section {
   margin: 0 auto;
   margin-top: 1.5em;
 }
-
-/* Carousel Section */
-/* Slider Images 1200 * 600 */
 
 .carousel {
   margin-bottom: 5em;
@@ -450,6 +457,17 @@ section {
   }
 }
 
+@media (max-width: 575px){
+  .projects-title{
+    color: #fff;
+    padding-bottom: .75em;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h2);
+    margin: 0 auto;
+    margin-top: .75em;
+  }
+}
+
 /* Skills Section */
 
 .skills-main-title {
@@ -504,11 +522,16 @@ section {
 .skills-list {
   font-size: var(--fs-h3);
   padding: 1em;
+  margin-bottom: 0;
 }
 
 /* Media Queries for Skills Section */
 
 @media (max-width: 575px){
+
+  .skills-main-title {
+    padding: .75em 0;
+  }
 
   .skills-container {
     margin-bottom: 1em;
