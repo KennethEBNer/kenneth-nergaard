@@ -471,16 +471,18 @@ header {
 .skills-main-title {
   margin: 0 auto;
   padding: 1em 0;
+  padding-top: 1.5em;
   font-family: var(--ff-primary);
   color: #000;
 }
 
 #skills-shadow {
   background-color: #303030;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -552,6 +554,57 @@ header {
     font-size: var(--fs-body);
     padding: .5em 0;
   }
+}
+
+/* Contact Section */
+
+#contact {
+  padding: 2em 0;
+  padding-bottom: 6em;
+  background-color: var(--clr-dark);
+}
+
+.contact-main-title {
+  margin: 0 auto;
+  padding: 1em 0;
+  font-family: var(--ff-primary);
+  color: #fff;
+}
+
+.contact-container {
+  background-color: rgba(14, 14, 14, 0.6);
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2em 0;
+  padding-bottom: 1em;
+  justify-content: space-evenly;
+  border: 1px solid var(--clr-accent);
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.contact-box {
+  margin: 0 1em;
+  margin-bottom: 1em;
+  padding: 0 .5em;
+  background-color: var(--clr-accent);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 50ms ease-in-out;
+}
+
+.contact-link {
+  color: #000;
+  font-size: var(--fs-h3);
+}
+
+.contact-link:hover {
+  text-decoration: none;
+}
+
+.contact-box:hover {
+  transform: scale(1.1);
 }
 
 /* Bootstrap breakpoints:
