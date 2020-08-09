@@ -7,8 +7,8 @@
 /* Custom Properties */
 
 :root {
-  --ff-primary: 'Source Sans Pro', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-secondary:'Noto Sans JP', sans-serif;
 
   --fw-reg: 400;
   --fw-bold: 900;
@@ -102,7 +102,7 @@ header {
   text-decoration: none;
   border-bottom: 1px solid var(--clr-accent);
   padding: 0 .15em;
-  /* border: 2px solid red; */
+  letter-spacing: .01em;
 }
 
 .nav {
@@ -287,6 +287,8 @@ header {
   margin-bottom: 1.5em;
   display: block;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: .15em;
 }
 
 .intro-img {
@@ -401,6 +403,7 @@ header {
   cursor: pointer;
   width: 170px;
   border-radius: 5px;
+  text-transform: uppercase;
   transition: transform 50ms ease-in-out;
 }
 .carousel-btn:hover {
@@ -478,10 +481,6 @@ header {
 
 #skills-shadow {
   background-color: #303030;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; */
   position: relative;
   display: flex;
   justify-content: space-evenly;
@@ -516,10 +515,10 @@ header {
   font-size: 26px;
   line-height: 1.6;
   border-bottom: 3px solid var(--clr-accent);
-  /* text-decoration: underline var(--clr-accent); */
 }
 
 .skills-list {
+  font-family: var(--ff-secondary);
   font-size: var(--fs-h3);
   padding: 1em;
   margin-bottom: 0;
