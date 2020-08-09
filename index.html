@@ -10,8 +10,9 @@
   <!-- Link to Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+  <!-- Link to Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700;800&family=Source+Sans+Pro:wght@400;700&display=swap"
     rel="stylesheet">
   <!-- Link to Local Stylesheet -->
   <link type="text/css" rel="stylesheet" href="./css/style.css">
@@ -49,12 +50,11 @@
 
   <!-- PROJECTS SECTION -->
   <section id="projects" class="projects">
-    <div class="container">
       <div class="row">
         <h2 class="projects-title">Prosjekter</h2>
       </div>
       <div class="row">
-        <div class="col-xl-10 m-auto">
+        <div class="col-lg-9 m-auto">
           <div id="slider1" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li class="active" data-target="#slider4" data-slide-to="0"></li>
@@ -105,7 +105,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section> <!-- END PROJECTS SECTION -->
 
   <!-- SKILLS SECTION -->
@@ -195,7 +194,7 @@
 
         // Animate smooth scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top - 50
+          scrollTop: $(hash).offset().top - 20
         }, 700, function () {
           // Add hash to URL after scroll
           /* window.location.hash = hash; */
