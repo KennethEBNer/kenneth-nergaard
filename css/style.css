@@ -262,35 +262,41 @@ header {
 /* Intro Section */
 
 .intro {
-  top: 3em;
-  padding: 8em 2em;
+  top: 2.5em;
+  padding: 7em 2em;
   position: relative;
 }
+
 .main-title {
   font-family: var(--ff-primary);
+  margin-bottom: .5em;
   font-weight: 800;
 }
+
 .main-title strong {
   display: block;
   text-align: center;
 }
+
 .main-subtitle {
-  font-family: var(--ff-secondary);
+  margin: 0;
   margin-top: 2em;
   font-size: 1.5rem;
   background-color: var(--clr-accent);
   padding: .25em 1em;
+  font-family: var(--ff-secondary);
   margin-bottom: 1.5em;
   display: block;
   text-align: center;
   font-weight: 400;
-  letter-spacing: .1em;
+  letter-spacing: .15em;
 }
+
 .intro-img {
   display: none;
 }
 
-/* Media Queries Intro Section */
+/* Media Queries for Intro Section */
 
 @media (min-width: 993px) {
 
@@ -307,20 +313,24 @@ header {
         'img subtitle';
     grid-template-columns: min-content max-content;
   }
+
   .main-title {
     position: relative;
     top: 1.25em;
-    margin-bottom: .25em;
+    margin-bottom: 0;
   }
+
   .intro-img {
     display: block;
-    max-width: 260px;
+    max-width: 300px;
     box-shadow: var(--bs);
     grid-area: img;
+    min-width: 250px;
     position: relative;
-    z-index: 3;
-  }
-  .main-subtitle {
+    z-index: 3;       
+}
+
+.main-subtitle {
   align-self: start;
   grid-column: -1 / 1;
   grid-row: 2;
@@ -328,7 +338,7 @@ header {
   position: relative;
   left: -1.5em;
   width: calc(100% + 1.5em);
-  }
+}
 }
 
 @media (min-width: 1650px) {
@@ -345,10 +355,11 @@ header {
 @media (max-width: 575px) {
 
   .intro {
-    top: 4em;
+    top: 3.5em;
   }
   .intro {
-    padding: 5em 2em;
+    padding: 4em 2em;
+    position: relative;
   }
   .main-subtitle {
     font-size: 1.15rem;
@@ -360,6 +371,19 @@ header {
 .projects {
   background-color: var(--clr-dark);
 }
+<<<<<<< HEAD
+=======
+
+.projects-title{
+  color: #fff;
+  padding-bottom: .75em;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+>>>>>>> parent of f07547f... DRY code for intro section
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
@@ -508,8 +532,17 @@ header {
 
 /* Skills Section */
 
+<<<<<<< HEAD
 .section-title-black {
   color: black;
+=======
+.skills-main-title {
+  margin: 0 auto;
+  padding: 1em 0;
+  padding-top: 1.5em;
+  font-family: var(--ff-primary);
+  color: #000;
+>>>>>>> parent of f07547f... DRY code for intro section
 }
 
 #skills-shadow {
