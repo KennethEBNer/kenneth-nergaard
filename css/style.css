@@ -149,7 +149,7 @@ header {
 
 /* Media Queries Header */
 
-@media (min-width: 1650px) {
+/* @media (min-width: 1650px) {
 
   .logo a {
     font-size: 1.5rem;
@@ -157,7 +157,7 @@ header {
   .nav-link {
     font-size: 1.5rem;
   }
-}
+} */
 
 @media (max-width: 992px) {
 
@@ -341,17 +341,6 @@ header {
 }
 }
 
-@media (min-width: 1650px) {
-  .intro-img {
-    display: block;
-    max-width: 320px;
-    box-shadow: var(--bs);
-    grid-area: img;
-    position: relative;
-    z-index: 3;
-  }
-}
-
 @media (max-width: 575px) {
 
   .intro {
@@ -361,9 +350,6 @@ header {
     padding: 4em 2em;
     position: relative;
   }
-  .main-subtitle {
-    font-size: 1.15rem;
-  }
 }
 
 /* Projects Section */
@@ -371,8 +357,6 @@ header {
 .projects {
   background-color: var(--clr-dark);
 }
-<<<<<<< HEAD
-=======
 
 .projects-title{
   color: #fff;
@@ -383,7 +367,6 @@ header {
   margin-top: 1.5em;
 }
 
->>>>>>> parent of f07547f... DRY code for intro section
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
@@ -532,17 +515,12 @@ header {
 
 /* Skills Section */
 
-<<<<<<< HEAD
-.section-title-black {
-  color: black;
-=======
 .skills-main-title {
   margin: 0 auto;
   padding: 1em 0;
   padding-top: 1.5em;
   font-family: var(--ff-primary);
   color: #000;
->>>>>>> parent of f07547f... DRY code for intro section
 }
 
 #skills-shadow {
