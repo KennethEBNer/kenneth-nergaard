@@ -385,6 +385,11 @@ header {
   transform: scale(1.1);
   text-decoration: none;
 }
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 30px!important;
+  height: 30px!important;
+}
 
 /* Media Queries for Projects Section */
 
@@ -405,11 +410,6 @@ header {
   }
   .carousel-indicators li {
     width: 60px!important;
-  }
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 30px!important;
-    height: 30px!important;
   }
 }
 
@@ -459,16 +459,6 @@ header {
   color: black;
 }
 
-#skills-shadow {
-  background-color: #303030;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 3em;
-  padding-top: 3em;
-}
-
 .skills-container {
   margin-bottom: 3em;
   border: 3px solid var(--clr-accent);
@@ -477,7 +467,6 @@ header {
 
 .skills-text {
   background-color: rgba(14, 14, 14, 0.6);
-  /* background-color: var(--clr-dark); */
   color: #fff;
   margin: 3em auto;
   padding: .5em 2em;
@@ -504,36 +493,25 @@ header {
   margin-bottom: 0;
 }
 
+.skills-col {
+  background-color: rgba(14, 14, 14, 0.9)!important;
+}
+
+.card {
+  background-color: var(--clr-dark)!important;
+}
+
+.card-body,
+.card-title {
+  background-color: var(--clr-dark)!important;
+}
+
+.card-body {
+  margin: 0;
+}
+
 /* Media Queries for Skills Section */
 
-@media (max-width: 575px){
-
-  .skills-main-title {
-    padding: .75em 0;
-  }
-
-  .skills-container {
-    margin-bottom: 1em;
-  }
-
-  .skills-text {
-    margin: 2em auto;
-    padding: .5em 2em;
-    border: 1px solid var(--clr-accent);
-    border-radius: 35px;
-    text-align: center;
-  }
-
-  .skills-text-title {
-    font-size: 22px;
-    padding: .25em .5em;
-  }
-
-  .skills-list {
-    font-size: var(--fs-body);
-    padding: .5em 0;
-  }
-}
 
 /* Contact Section */
 
