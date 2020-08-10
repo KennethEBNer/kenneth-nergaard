@@ -17,22 +17,37 @@
 
   --fs-h1: 4rem;
   --fs-h2: 3.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1.125rem;
+  --fs-h3: 2.5rem;
+  --fs-body: 1.15rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
         0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
+
  /* Font sizes for screens under 992px */
-@media (max-width: 992px) {
+
+ @media (max-width: 992px) {
   :root {
       --fs-h1: 3rem;
       --fs-h2: 2.25rem;
-      --fs-h3: 1.25rem;
-      --fs-body: 1rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.15rem;
   }
 }
+
+ /* Font sizes for screens over 1650px */
+
+ @media (min-width: 1650px) {
+  :root {
+      --fs-h1: 5rem;
+      --fs-h2: 4rem;
+      --fs-h3: 3rem;
+      --fs-body: 1.5rem;
+  }
+}
+
 /* Font sizes for screens under 575px */
+
 @media (max-width: 575px) {
   :root {
     --fs-h1: 2.5rem;
@@ -44,9 +59,18 @@
 
 /* General Styles */
 
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
 body {
-  font-family: var(--ff-primary);
   font-size: var(--fs-body);
+  font-family: var(--ff-primary);
   background-color: var(--clr-light);
   line-height: 1.6;
 }
@@ -58,21 +82,23 @@ ul {
   display: inline-block;
   list-style: none;
 }
+.section-title {
+  color: #fff;
+  padding-bottom: .75em;
+  font-family: var(--ff-primary);
+  margin: 0 auto;
+  margin-top: 1em;
+}
 :focus {
   outline: 1px solid var(--clr-accent);
   outline-offset: 2px;
 }
 
-/* Typography */
-
-h1 {
-    font-size: var(--fs-h1);
-}
-h2 {
-    font-size: var(--fs-h2);
-}
-h3 {
-    font-size: var(--fs-h3);
+@media (min-width: 1650px) {
+  .section-title {
+    padding-bottom: 1em;
+    margin-top: 1.25em;
+  }
 }
 
 /* Header */
@@ -90,7 +116,7 @@ header {
 }
 .logo a {
   color: #fff;
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
   margin-left: 4em;
   text-decoration: none;
   border-bottom: 1px solid var(--clr-accent);
@@ -114,7 +140,7 @@ header {
 }
 .nav-link {
   color: inherit;
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
   margin-right: 1.5em;
 }
 .nav-link:hover {
@@ -122,6 +148,16 @@ header {
 }
 
 /* Media Queries Header */
+
+@media (min-width: 1650px) {
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
 
 @media (max-width: 992px) {
 
@@ -241,7 +277,7 @@ header {
 .main-subtitle {
   font-family: var(--ff-secondary);
   margin-top: 2em;
-  font-size: 1.25em;
+  font-size: 1.5rem;
   background-color: var(--clr-accent);
   padding: .25em 1em;
   margin-bottom: 1.5em;
@@ -295,6 +331,17 @@ header {
   }
 }
 
+@media (min-width: 1650px) {
+  .intro-img {
+    display: block;
+    max-width: 320px;
+    box-shadow: var(--bs);
+    grid-area: img;
+    position: relative;
+    z-index: 3;
+  }
+}
+
 @media (max-width: 575px) {
 
   .intro {
@@ -303,6 +350,9 @@ header {
   .intro {
     padding: 5em 2em;
   }
+  .main-subtitle {
+    font-size: 1.15rem;
+  }
 }
 
 /* Projects Section */
@@ -310,42 +360,33 @@ header {
 .projects {
   background-color: var(--clr-dark);
 }
-
-.projects-title{
-  color: #fff;
-  padding-bottom: .75em;
-  font-family: var(--ff-primary);
-  font-size: var(--fs-h2);
-  margin: 0 auto;
-  margin-top: 1em;
-}
-
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
-}
-
-.carousel-caption {
-  margin-bottom: 2.5em!important;
-  background-color: rgba(14, 14, 14, 0.85);
-  padding: 1em 1em;
   border: 1px solid var(--clr-accent);
-  border-radius: 25px;
 }
-
-.carousel-title {
-  font-size: 2.5em;
+.carousel-img {
+  height: 470px;
+  width: 100%;
+}
+.carousel-caption {
+  margin-bottom: 3em!important;
+  background-color: rgba(14, 14, 14, 0.85);
+  padding: 2em;
+  border: 1px solid var(--clr-accent);
+  border-radius: 45px;
+}
+.project-title {
+  font-size: var(--fs-h3);
   font-family: var(--ff-primary);
   color: var(--clr-light);
   margin: 0;
 }
-
 .carousel-text {
   margin: 2em auto;
-  font-size: 1.15em;
+  font-size: var(--fs-body);
   font-family: var(--ff-primary);
 }
-
 .carousel-btn {
   font-size: 0.85em;
   font-weight: var(--fw-bold);
@@ -369,10 +410,43 @@ header {
 
 /* Media Queries for Projects Section */
 
+@media (min-width: 1650px) {
+
+  .carousel {
+    margin-bottom: 6em;
+    z-index: 2;
+    border: 1px solid var(--clr-accent);
+  }
+  .carousel-caption {
+    margin-bottom: 3.5em!important;
+    padding: 2em;
+  }
+  .carousel-btn {
+    width: 190px;
+  }
+  .carousel-img {
+    height: 650px;
+    width: 100%;
+  }
+  .carousel-indicators li {
+    width: 60px!important;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 30px!important;
+    height: 30px!important;
+  }
+}
+
 @media (max-width: 992px) {
   .projects-title{
     padding-bottom: 1em;
     margin-top: 1.5em;
+  }
+
+  .carousel-img {
+    height: 400px;
+    width: 100%;
   }
 
   .carousel-caption {
@@ -396,18 +470,22 @@ header {
 
 @media (max-width: 768px) {
   .carousel-caption {
-    margin-bottom: 1.5em!important;
-    padding: 1.5em 1em;
+    margin-bottom: 2.5em!important;
+    /* padding: 1.5em 1em; */
   }
-
-  .carousel-title {
-    font-size: 1.5em;
-    padding-bottom: 1em;
+  .carousel-img {
+    height: 320px;
+    width: 100%;
+  }
+  .project-title {
+    font-size: 1.25em;
+    padding-bottom: 1.25em;
   }
   .carousel-btn {
+    font-size: 0.75em;
     display: block;
     margin: 0 auto;
-    width: 150px;
+    width: 130px;
   }
   .carousel-btn + .carousel-btn {
     margin-top: 1em;
@@ -422,16 +500,16 @@ header {
     margin: 0 auto;
     margin-top: .75em;
   }
+  .carousel-img {
+    height: 250px;
+    width: 100%;
+  }
 }
 
 /* Skills Section */
 
-.skills-main-title {
-  margin: 0 auto;
-  padding: 1em 0;
-  padding-top: 1em;
-  font-family: var(--ff-primary);
-  color: #000;
+.section-title-black {
+  color: black;
 }
 
 #skills-shadow {
@@ -474,7 +552,7 @@ header {
 
 .skills-list {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
   padding: 1em;
   margin-bottom: 0;
 }
@@ -518,13 +596,6 @@ header {
   background-color: var(--clr-dark);
 }
 
-.contact-main-title {
-  margin: 0 auto;
-  padding: 1em 0;
-  font-family: var(--ff-primary);
-  color: #fff;
-}
-
 .contact-container {
   background-color: rgba(14, 14, 14, 0.6);
   display: flex;
@@ -550,7 +621,7 @@ header {
 
 .contact-link {
   color: #000;
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
 }
 
 .contact-link:hover {
