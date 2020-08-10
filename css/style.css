@@ -357,16 +357,6 @@ header {
 .projects {
   background-color: var(--clr-dark);
 }
-
-.projects-title{
-  color: #fff;
-  padding-bottom: .75em;
-  font-family: var(--ff-primary);
-  font-size: var(--fs-h2);
-  margin: 0 auto;
-  margin-top: 1.5em;
-}
-
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
@@ -515,12 +505,8 @@ header {
 
 /* Skills Section */
 
-.skills-main-title {
-  margin: 0 auto;
-  padding: 1em 0;
-  padding-top: 1.5em;
-  font-family: var(--ff-primary);
-  color: #000;
+.section-title-black {
+  color: black;
 }
 
 #skills-shadow {
