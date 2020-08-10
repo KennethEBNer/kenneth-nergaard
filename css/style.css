@@ -13,31 +13,16 @@
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #FF9C10;
-  /* --clr-accent: #ffb310; */
 
   --fs-h1: 4rem;
   --fs-h2: 3.25rem;
   --fs-h3: 2.5rem;
   --fs-body: 1.15rem;
-
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
- /* Font sizes for screens under 992px */
+ /* Responsive Font Sizes */
 
- @media (max-width: 992px) {
-  :root {
-      --fs-h1: 3rem;
-      --fs-h2: 2.25rem;
-      --fs-h3: 1.5rem;
-      --fs-body: 1.15rem;
-  }
-}
-
- /* Font sizes for screens over 1650px */
-
- @media (min-width: 1650px) {
+@media (min-width: 1650px) {
   :root {
       --fs-h1: 5rem;
       --fs-h2: 4rem;
@@ -46,7 +31,14 @@
   }
 }
 
-/* Font sizes for screens under 575px */
+@media (max-width: 992px) {
+  :root {
+      --fs-h1: 3rem;
+      --fs-h2: 2.25rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.15rem;
+  }
+}
 
 @media (max-width: 575px) {
   :root {
@@ -92,13 +84,6 @@ ul {
 :focus {
   outline: 1px solid var(--clr-accent);
   outline-offset: 2px;
-}
-
-@media (min-width: 1650px) {
-  .section-title {
-    padding-bottom: 1em;
-    margin-top: 1.25em;
-  }
 }
 
 /* Header */
@@ -149,7 +134,7 @@ header {
 
 /* Media Queries Header */
 
-/* @media (min-width: 1650px) {
+@media (min-width: 1650px) {
 
   .logo a {
     font-size: 1.5rem;
@@ -157,7 +142,7 @@ header {
   .nav-link {
     font-size: 1.5rem;
   }
-} */
+}
 
 @media (max-width: 992px) {
 
@@ -177,7 +162,6 @@ header {
     margin-right: 0;
     justify-content: center;
     align-items: center;
-
     transform: translateX(100%);
   }
   .nav-list {
@@ -213,9 +197,6 @@ header {
     transform: translateX(0);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
   }
-  /* .nav-open .nav-toggle {
-    position: fixed;
-  } */
   .nav-open .hamburger {
     transform: rotate(.625turn);
   }
@@ -262,22 +243,19 @@ header {
 /* Intro Section */
 
 .intro {
-  top: 2.5em;
+  top: 3.5em;
   padding: 7em 2em;
   position: relative;
 }
-
 .main-title {
   font-family: var(--ff-primary);
   margin-bottom: .5em;
   font-weight: 800;
 }
-
 .main-title strong {
   display: block;
   text-align: center;
 }
-
 .main-subtitle {
   margin: 0;
   margin-top: 2em;
@@ -291,12 +269,11 @@ header {
   font-weight: 400;
   letter-spacing: .15em;
 }
-
 .intro-img {
   display: none;
 }
 
-/* Media Queries for Intro Section */
+/* Media Queries Intro Section */
 
 @media (min-width: 993px) {
 
@@ -313,42 +290,35 @@ header {
         'img subtitle';
     grid-template-columns: min-content max-content;
   }
-
   .main-title {
     position: relative;
     top: 1.25em;
     margin-bottom: 0;
   }
-
   .intro-img {
     display: block;
     max-width: 300px;
-    box-shadow: var(--bs);
+    box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+              0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
     grid-area: img;
     min-width: 250px;
     position: relative;
     z-index: 3;       
-}
-
-.main-subtitle {
-  align-self: start;
-  grid-column: -1 / 1;
-  grid-row: 2;
-  text-align: right;
-  position: relative;
-  left: -1.5em;
-  width: calc(100% + 1.5em);
-}
+  }
+  .main-subtitle {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
 }
 
 @media (max-width: 575px) {
-
-  .intro {
-    top: 3.5em;
-  }
-  .intro {
-    padding: 4em 2em;
-    position: relative;
+  .main-subtitle {
+    font-size: 1.25rem;
   }
 }
 
@@ -360,7 +330,7 @@ header {
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
-  border: 1px solid var(--clr-accent);
+  border: 1px solid var(--clr-light);
 }
 .carousel-img {
   height: 470px;
@@ -370,7 +340,7 @@ header {
   margin-bottom: 3em!important;
   background-color: rgba(14, 14, 14, 0.85);
   padding: 2em;
-  border: 1px solid var(--clr-accent);
+  border: 2px solid var(--clr-accent);
   border-radius: 45px;
 }
 .project-title {
@@ -383,6 +353,17 @@ header {
   margin: 2em auto;
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
+}
+.carousel-text a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.carousel-text a:hover {
+  color: #186ebb;
+}
+.carousel-text a:focus {
+  outline: none;
 }
 .carousel-btn {
   font-size: 0.85em;
@@ -409,21 +390,18 @@ header {
 
 @media (min-width: 1650px) {
 
+  .section-title {
+    padding-bottom: 1em;
+    margin-top: 1.25em;
+  }
   .carousel {
     margin-bottom: 6em;
-    z-index: 2;
-    border: 1px solid var(--clr-accent);
-  }
-  .carousel-caption {
-    margin-bottom: 3.5em!important;
-    padding: 2em;
   }
   .carousel-btn {
     width: 190px;
   }
   .carousel-img {
     height: 650px;
-    width: 100%;
   }
   .carousel-indicators li {
     width: 60px!important;
@@ -436,53 +414,30 @@ header {
 }
 
 @media (max-width: 992px) {
-  .projects-title{
-    padding-bottom: 1em;
-    margin-top: 1.5em;
-  }
 
   .carousel-img {
     height: 400px;
-    width: 100%;
   }
-
   .carousel-caption {
-    margin-bottom: 2.5em!important;
-    padding: 1em 1em;
+    padding: 1em;
   }
-
-  .carousel-title {
-    font-size: 2em;
-  }
-
   .carousel-text {
     margin: 1em auto;
-    font-size: 1em;
   }
-
   .carousel-btn {
     width: 130px;
   }
 }
 
 @media (max-width: 768px) {
-  .carousel-caption {
-    margin-bottom: 2.5em!important;
-    /* padding: 1.5em 1em; */
-  }
-  .carousel-img {
-    height: 320px;
-    width: 100%;
-  }
+
   .project-title {
     font-size: 1.25em;
-    padding-bottom: 1.25em;
   }
   .carousel-btn {
     font-size: 0.75em;
     display: block;
     margin: 0 auto;
-    width: 130px;
   }
   .carousel-btn + .carousel-btn {
     margin-top: 1em;
@@ -490,16 +445,11 @@ header {
 }
 
 @media (max-width: 575px){
-  .projects-title{
-    color: #fff;
-    padding-bottom: .75em;
-    font-size: var(--fs-h2);
-    margin: 0 auto;
-    margin-top: .75em;
+  .project-title{
+    padding-bottom: 1em;
   }
   .carousel-img {
     height: 250px;
-    width: 100%;
   }
 }
 
@@ -634,7 +584,7 @@ header {
 xs - 576px and under
 sm - 576px and over
 md - 768px and over
-ls - 992px and over
+lg - 992px and over
 xl - 1200px and over
 
 */
