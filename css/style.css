@@ -330,7 +330,6 @@ header {
 .carousel {
   margin-bottom: 4em;
   z-index: 2;
-  border: 1px solid var(--clr-light);
 }
 .carousel-img {
   height: 470px;
@@ -459,18 +458,19 @@ header {
   color: black;
 }
 
-.skills-container {
-  margin-bottom: 3em;
-  border: 3px solid var(--clr-accent);
-  min-width: 40%;
+.card-body {
+  background-color: rgba(14, 14, 14, 0.8)!important;
+  border: 2px solid var(--clr-accent);
+  border-radius: 20px;
+  margin-bottom: 4em!important;
 }
 
 .skills-text {
-  background-color: rgba(14, 14, 14, 0.6);
+  background-color: black;
   color: #fff;
   margin: 3em auto;
-  padding: .5em 2em;
-  border: 1px solid var(--clr-accent);
+  padding: .5em 0;
+  border: 1px solid #fff;
   border-radius: 35px;
   text-align: center;
 }
@@ -481,10 +481,10 @@ header {
   display: block;
   width: fit-content;
   font-family: var(--ff-primary);
-  font-size: 26px;
+  font-size: 1.75rem;
   line-height: 1.6;
   border-bottom: 3px solid var(--clr-accent);
-}
+} 
 
 .skills-list {
   font-family: var(--ff-secondary);
@@ -494,16 +494,18 @@ header {
 }
 
 .skills-col {
-  background-color: rgba(14, 14, 14, 0.9)!important;
+  background: url('../img/project-background-1.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .card {
-  background-color: var(--clr-dark)!important;
+  background-color: transparent!important;
+  width: 45%;
 }
 
-.card-body,
 .card-title {
-  background-color: var(--clr-dark)!important;
+  background-color: transparent!important;
 }
 
 .card-body {
@@ -512,6 +514,8 @@ header {
 
 /* Media Queries for Skills Section */
 
+@media (max-width: 992px) {
+}
 
 /* Contact Section */
 
