@@ -276,6 +276,12 @@ header {
 
 /* Media Queries Intro Section */
 
+@media (min-width: 1650px) {
+  .main-subtitle {
+    margin-top: 3.5em;
+  }
+}
+
 @media (min-width: 993px) {
 
   .intro {
@@ -468,7 +474,10 @@ header {
   background-color: rgba(14, 14, 14, 0.8)!important;
   border: 2px solid var(--clr-accent);
   border-radius: 20px;
+  margin: 0 auto;
   margin-bottom: 4em!important;
+  width: 100%;
+  min-width: 200px;
 }
 
 .skills-text-title {
@@ -491,6 +500,7 @@ header {
   border-radius: 35px;
   text-align: center;
   display: flex;
+  min-width: 200px;
   justify-content: space-evenly;
 }
 
@@ -520,7 +530,7 @@ header {
 
 @media (max-width: 992px) {
   .card {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
