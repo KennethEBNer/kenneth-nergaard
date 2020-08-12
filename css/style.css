@@ -130,6 +130,7 @@ header {
 }
 .nav-link:hover {
   color: var(--clr-accent);
+  color: #207ccc;
 }
 
 /* Media Queries Header */
@@ -355,7 +356,6 @@ header {
 }
 .carousel-text a {
   color: #fff;
-  font-weight: bold;
   text-decoration: underline;
 }
 .carousel-text a:hover {
@@ -380,7 +380,7 @@ header {
   transition: transform 50ms ease-in-out;
 }
 .carousel-btn:hover {
-  color: #000;
+  color: #186ebb;
   transform: scale(1.1);
   text-decoration: none;
 }
@@ -432,6 +432,7 @@ header {
 
   .project-title {
     font-size: 1.25em;
+    padding-bottom: 2em;
   }
   .carousel-btn {
     font-size: 0.75em;
@@ -458,21 +459,16 @@ header {
   color: black;
 }
 
+.card {
+  background-color: transparent!important;
+  width: 45%;
+}
+
 .card-body {
   background-color: rgba(14, 14, 14, 0.8)!important;
   border: 2px solid var(--clr-accent);
   border-radius: 20px;
   margin-bottom: 4em!important;
-}
-
-.skills-text {
-  background-color: black;
-  color: #fff;
-  margin: 3em auto;
-  padding: .5em 0;
-  border: 1px solid #fff;
-  border-radius: 35px;
-  text-align: center;
 }
 
 .skills-text-title {
@@ -485,6 +481,16 @@ header {
   line-height: 1.6;
   border-bottom: 3px solid var(--clr-accent);
 } 
+
+.skills-text {
+  background-color: black;
+  color: #fff;
+  margin: 3em auto;
+  padding: .5em 0;
+  border: 1px solid #fff;
+  border-radius: 35px;
+  text-align: center;
+}
 
 .skills-list {
   font-family: var(--ff-secondary);
@@ -499,22 +505,44 @@ header {
   background-position: center;
 }
 
-.card {
-  background-color: transparent!important;
-  width: 45%;
-}
-
 .card-title {
   background-color: transparent!important;
 }
 
-.card-body {
-  margin: 0;
-}
 
 /* Media Queries for Skills Section */
 
 @media (max-width: 992px) {
+  .card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .skills-text-title {
+    color: #fff;
+    padding: .25em 1em;
+    display: block;
+    width: fit-content;
+    font-family: var(--ff-primary);
+    font-size: 1.25rem;
+  } 
+
+  .skills-text {
+    background-color: black;
+    color: #fff;
+    margin: .5em auto;
+    padding: 1em 0;
+    border: 1px solid #fff;
+    border-radius: 35px;
+    text-align: center;
+  }
+  
+  .skills-list {
+    font-family: var(--ff-secondary);
+    font-size: 1rem;
+    padding: .5em;
+    margin-bottom: 0;
+  }
 }
 
 /* Contact Section */
@@ -526,7 +554,7 @@ header {
 }
 
 .contact-container {
-  background-color: rgba(14, 14, 14, 0.6);
+  background-color: rgba(0, 0, 0);
   display: flex;
   width: 60%;
   margin: 0 auto;
