@@ -490,13 +490,19 @@ header {
   border: 1px solid #fff;
   border-radius: 35px;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .skills-list {
   font-family: var(--ff-secondary);
   font-size: 1.25rem;
-  padding: 1em;
+  padding: 1em 0;
   margin-bottom: 0;
+}
+
+.skills-list-right {
+  padding-bottom: 2.5em;
 }
 
 .skills-col {
